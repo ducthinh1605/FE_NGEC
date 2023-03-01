@@ -1,0 +1,43 @@
+<div class="container">
+    <header>
+      <div class="navbar">
+        <img [src]="logoimg" alt="" class="logo">
+        <nav>
+           <ul>
+               <li><a href="">Home</a></li>
+               <li><a href="">Featured</a></li>
+               <li><a href="">Product</a></li>
+               <li><a href="">Explore</a></li>
+               <li><a href="">Contact</a></li>
+           </ul>
+        </nav>
+        <a href=""><i class="fa cart fa-cart-plus"></i></a>
+    </div>
+    </header>
+      <main>
+    </main>
+    <aside>
+     <h2>Filters</h2>
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <!-- This is the tree node template for leaf nodes -->
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+          <!-- use a disabled button to provide padding for tree leaf -->
+          <button mat-icon-button disabled></button>
+          {{node.name}}
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+          <button mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          {{node.name}}
+        </mat-tree-node>
+      </mat-tree>      
+    </aside>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>

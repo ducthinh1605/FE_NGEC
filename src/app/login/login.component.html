@@ -1,0 +1,58 @@
+
+<div class="background">
+
+
+
+<div class="main__container h-100 w-100 d-flex justify-content-center align-items-center">
+  <div class="login-card">
+    <main class="login-content">
+    <form class="login-form">
+      <h1> Sign In </h1>
+      <br>
+    <table class="example-full-width" cellspacing="0"><tr>
+      
+      <td><mat-form-field class="example-full-width">
+        <mat-label>User name</mat-label>
+        <input matInput >
+      </mat-form-field></td>
+    </tr></table>
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password length of 8-32 characters">
+      </mat-form-field></td>
+    </tr></table>
+    <div class="example-button-row">
+      <button mat-fab extended color="primary">
+        <mat-icon>how_to_reg</mat-icon>
+        Login
+      </button>
+      <button mat-fab extended color="white">
+        <mat-icon>person_add</mat-icon>
+        Signup
+      </button>
+      <button mat-fab extended color="primary">
+        <mat-icon>facebook</mat-icon>
+        Login with facebook
+      </button>
+      <section class="example-section">
+        <mat-slide-toggle
+            class="example-margin"
+            [color]="color"
+            [checked]="ischecked">
+            Remember me!
+        </mat-slide-toggle>
+      </section>
+    </div>
+    <br>
+    <h3><a href="">forgot password?</a></h3>
+  </form>
+    </main>
+</div>
+</div>
+<app-footer></app-footer>
+</div>
+
+
+
+  
