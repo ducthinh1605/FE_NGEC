@@ -1,0 +1,18 @@
+body {
+  background: #2778a7;
+  background: -webkit-linear-gradient(to right, #2778a7, #00d9ff);
+  background: linear-gradient(to right, #2778a7, #00d9ff);
+  height: auto;
+}
+a{
+  text-decoration: none;
+}
+
+.text-gray {
+  color: #aaa;
+}
+.catagory-border{
+  border: 2px solid rgb(198, 198, 198);
+  display: inline;
+  background-color: white;
+}

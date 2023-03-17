@@ -4,13 +4,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+   
 }
 .container {
     height: 100vh;
     width: 100%;
-    background-image: url(https://wallpaperaccess.com/full/1558939.jpg);
-    background-position: center;
-    background-size: cover;
     padding-right: 5%;
     padding-left: 3%;
     box-sizing: border-box;
@@ -25,10 +23,9 @@
     align-items: center;
 }
 .logo {
-    width: 25vh;
+    width: 180px;
     margin-top: 10px;
     cursor: pointer;
-
 }
 nav {
     flex: 1;
@@ -41,22 +38,22 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #ffff;
+    color: #1b1b1b;
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 600;
 }
 a .cart {
     font-size: 60px;
-    color: #1b4156;
+    color: #1b1b1b;
 }
 a .cart:hover {
     transform: scale(1.1);
-    color: #2778a7;
+    color: rgb(4, 138, 234);
     transition: all .5s;
 }
 .content {
-    position: relative;
+    position: absolute;
 }
 h1 {
     text-transform: uppercase;
@@ -64,45 +61,25 @@ h1 {
     margin-top: 100px;
     letter-spacing: .1em;
     font-size: 70px;
-    color: #ffff;
+    color: #1b1b1b;
 }
 h1 .style {
     color: #2778a7;
     font-size: 80px;
     font-weight: 800;
     font-family: 'Lobster', cursive;
-    -webkit-text-stroke: 0.1px white;
 }
 p {
     font-size: 15px;
     font-weight: 600;
     letter-spacing: .1em;
     margin-top: 35px;
-    color: #fff;
-    opacity: 0.7;
+    color: #1b1b1b;
 }
 .text {
     position: relative;
     display: flex;
     align-items: center;
-}
-.btn {
-    background-color: #2778a7;
-    margin-top: 80px;
-    padding: 15px 45px;
-    text-align: center;
-    border: none;
-    outline: none;
-    transition: .5s;
-    text-transform: uppercase;
-    color: #fffdfd;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 24px;
-    display: block;
-    border-radius: 30px;
-    background-size: 200% auto;
-    box-shadow: 3px 8px 22px rgba(22,21,21,.15);
 }
 .btn:hover {
     transform: scale(1.1);
@@ -129,7 +106,7 @@ p {
  .icons:hover {
     transform: scale(1.1);
     color: #fff;
-    background-color:#2778a7 ;
+    background-color: #2778a7;
     transition: all .5s;
  }
 .image {
