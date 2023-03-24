@@ -16,3 +16,8 @@ a{
   display: inline;
   background-color: white;
 }
+img{
+  width: 200px;
+  height: 220px;
+}
+.act-price{color:#2778a7;font-weight: 700}

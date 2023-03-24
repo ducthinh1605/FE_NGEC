@@ -1,7 +1,6 @@
 <div class="main">
 <button mat-button [matMenuTriggerFor]="animals">Choose what you want</button>
 <mat-menu #animals="matMenu">
-  
   <button mat-menu-item><nav *ngFor="let item of data"class="nav flex-column nav-pills">
     <a class="nav-link" aria-current="page" (click)="onClickCategory(item)">{{ item.category?.toString() | titlecase }}</a>
   </nav></button>

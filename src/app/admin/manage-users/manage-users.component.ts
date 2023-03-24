@@ -1,7 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/model/user.model';
 import { UserService } from 'src/service/user.service';
-
 
 @Component({
   selector: 'app-manage-users',
@@ -26,7 +26,6 @@ export class ManageUsersComponent implements OnInit {
     this.userService.getAll()
     .subscribe((data: User[]) => {
       this.dataUser = data;
-      console.log("🚀 ~ file: manage-users.component.ts:26 ~ ManageUsersComponent ~ .subscribe ~ data:", data)
     });
   }
 

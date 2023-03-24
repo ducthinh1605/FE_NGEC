@@ -3,27 +3,27 @@
 <div class="main__container h-100 w-100 d-flex justify-content-center align-items-center">
   <div class="login-card">
     <main class="login-content">
-    <form class="login-form">
+    <form [formGroup]="loginForm" class="login-form">
       <h1> Sign In </h1>
       <br>
     <table class="example-full-width" cellspacing="0"><tr>
       <td><mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input matInput >
+        <input matInput formControlName="email" type="email" id="form3Example3" >
       </mat-form-field></td>
     </tr></table>
     <table class="example-full-width" cellspacing="0"><tr>
       <td><mat-form-field class="example-full-width">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="Password length of 8-32 characters">
+        <input formControlName="password" type="password" id="form3Example4" matInput placeholder="Password length of 8-32 characters">
       </mat-form-field></td>
     </tr></table>
     <div class="example-button-row">
-      <button mat-fab extended color="primary">
+      <button mat-fab extended color="primary" [disabled]="loginForm.invalid" type="button"(click)="check_Login()">
         <mat-icon>how_to_reg</mat-icon>
         Login
       </button>
-      <button mat-fab extended color="white">
+      <button mat-fab extended color="white" (click)="register()">
         <mat-icon>person_add</mat-icon>
         Signup
       </button>
@@ -34,7 +34,6 @@
     </main>
 </div>
 </div>
-<app-footer></app-footer>
 </div>
 
 

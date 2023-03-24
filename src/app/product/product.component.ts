@@ -48,26 +48,26 @@ export class ProductComponent implements OnInit{
     });
   }
 
-  onRangeChange() {
-    this.maxValue = this.rangeValue;
-  }
+  // onRangeChange() {
+  //   this.maxValue = this.rangeValue;
+  // }
 
-  onMaxChange() {
-    this.rangeValue = this.maxValue;
-  }
+  // onMaxChange() {
+  //   this.rangeValue = this.maxValue;
+  // }
 
-  filterPrice() {
-    this.products = this.productsOriginal.filter((product: any) => product.price >= this.minValue && product.price <= this.maxValue);
-    this.totalItems = this.products.length;
-  }
+  // filterPrice() {
+  //   this.products = this.productsOriginal.filter((product: any) => product.price >= this.minValue && product.price <= this.maxValue);
+  //   this.totalItems = this.products.length;
+  // }
 
-  clearFilter() {
-    this.products = this.productsOriginal;
-    this.totalItems = this.products.length;
-    this.rangeValue = 0;
-    this.maxValue = 0;
-    this.minValue = 0;
-  }
+  // clearFilter() {
+  //   this.products = this.productsOriginal;
+  //   this.totalItems = this.products.length;
+  //   this.rangeValue = 0;
+  //   this.maxValue = 0;
+  //   this.minValue = 0;
+  // }
 
   getProducts() {
     const categoryParam: {} = {
@@ -75,7 +75,7 @@ export class ProductComponent implements OnInit{
       subCategory: this.categoryData.subCategory
     }
 
-    this.productService.getAll(categoryParam).subscribe((data) => {
+    this.productService.getByCategory(categoryParam).subscribe((data) => {
       this.products = data as Product[];
       this.productsOriginal = this.products;
       this.totalItems = this.products.length;
@@ -92,7 +92,7 @@ export class ProductComponent implements OnInit{
 
   navigateDetails(product: any) {
     const navigationExtras: NavigationExtras = {
-      queryParams: { categoryId: product.id }
+      queryParams: { productId: product.id }
     };
 
     this.router.navigate(['/single'], navigationExtras);

@@ -3,44 +3,46 @@
   <div class="main__container h-100 w-100 d-flex justify-content-center align-items-center">
     <div class="login-card">
       <main class="login-content">
-        <form class="register-form">
+        <form [formGroup]="registerForm" class="register-form">
           <br>
            <h1> Sign up </h1>
           <table class="example-full-width" cellspacing="0"><tr>
             <td><mat-form-field class="example-full-width">
               <mat-label>Email</mat-label>
-              <input matInput>
+              <input formControlName="email" matInput>
             </mat-form-field></td>
             <td><mat-form-field class="example-full-width">
               <mat-label>Password</mat-label>
-              <input matInput type="password">
+              <input formControlName="password" matInput type="password">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Confirm password</mat-label>
+              <input formControlName="confirmPassword" matInput type="password">
             </mat-form-field></td>
           </tr></table>
-        
           <p>
             <mat-form-field class="example-full-width">
               <mat-label>Address</mat-label>
-              <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+              <textarea formControlName="address" matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
             </mat-form-field>
           </p>
-        
           <table class="example-full-width" cellspacing="0"><tr>
             <td><mat-form-field class="example-full-width">
               <mat-label>Frist name</mat-label>
-              <input matInput placeholder="Ex. Le Ha Duc">
+              <input formControlName="firstName" matInput placeholder="Ex. Thinh">
             </mat-form-field></td>
             <td><mat-form-field class="example-full-width">
               <mat-label>Last name</mat-label>
-              <input matInput placeholder="Ex. Thinh">
+              <input formControlName="lastName" matInput placeholder="Ex. Le Ha Duc">
             </mat-form-field></td>
             <td><mat-form-field class="example-full-width">
               <mat-label>Phone number</mat-label>
-              <input matInput #postalCode maxlength="10" placeholder="Ex. 085xxxxxxx" value="">
+              <input formControlName="phoneNumber" matInput #postalCode maxlength="10" placeholder="Ex. 085xxxxxxx" value="">
               <mat-hint align="end">{{postalCode.value.length}} / 10</mat-hint>
             </mat-form-field></td>
           </tr></table>
         <div class="example-button-row">
-          <button mat-fab extended color="primary">
+          <button (click)="register()" [disabled]="registerForm.invalid" mat-fab extended color="primary">
             <mat-icon>how_to_reg</mat-icon>
             Confirm
           </button>
@@ -51,5 +53,4 @@
       </main>
   </div>
   </div>
-  <app-footer></app-footer>
   </div>

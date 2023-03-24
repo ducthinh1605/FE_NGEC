@@ -11,6 +11,7 @@ import { ProductService } from 'src/service/product.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit{
+
   isProductSession: boolean = false;
   category: any;
   data: Catagory[]=[];
@@ -24,6 +25,7 @@ export class IndexComponent implements OnInit{
     private productService: ProductService,
     private router: Router
   ) { }
+  
 
   ngOnInit(): void {
     // this.getCatagory();
@@ -52,5 +54,6 @@ export class IndexComponent implements OnInit{
     this.category = value;
     this.isProductSession = true;
   }
+  
 
 }

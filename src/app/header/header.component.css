@@ -165,3 +165,7 @@ li {
     background: -webkit-linear-gradient(left, #2778a7 48%, #1b1e21 48%);
     background: linear-gradient(45deg, #2778a7 48%, #1b1e21 48%);
 }
+button{
+  border-radius: 20px;
+  background-color: #2778a7;
+}

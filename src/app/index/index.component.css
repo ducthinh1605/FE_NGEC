@@ -6,6 +6,12 @@
     font-family: 'Poppins', sans-serif;
    
 }
+body{
+    background: #2778a7;
+    background: -webkit-linear-gradient(to right, #2778a7, #00d9ff);
+    background: linear-gradient(to right, #2778a7, #00d9ff);
+    height: auto;
+}
 .container {
     height: 100vh;
     width: 100%;
@@ -13,6 +19,7 @@
     padding-left: 3%;
     box-sizing: border-box;
     position: relative;
+  
     
 }
 .navbar {
@@ -64,7 +71,7 @@ h1 {
     color: #1b1b1b;
 }
 h1 .style {
-    color: #2778a7;
+    color: white;
     font-size: 80px;
     font-weight: 800;
     font-family: 'Lobster', cursive;
@@ -93,28 +100,27 @@ p {
     font-size: 27px;
  }
  .icons {
-    color: #2778a7;
+    color: rgb(0, 0, 0);
     padding: 12px 12px 10px 12px;
     border-radius: 50%;
     margin-left: 10px;
     width: 27px;
     text-align: center;
     height: 27px;
-    background-color: #fff;
     box-shadow: 3px 8px 22px rgba(22, 21, 21, 0.15);
  }
  .icons:hover {
     transform: scale(1.1);
-    color: #fff;
-    background-color: #2778a7;
+    color: #2778a7;
+    background-color: white;
     transition: all .5s;
  }
 .image {
     position: absolute;
-    width: 47%;
-    height: 47%;
+    width: 27%;
+    height: 40%;
     bottom: 0;
     margin-bottom: 170px;
     margin-left: 530px;
-    transform: rotate(-35deg);
+    
 }

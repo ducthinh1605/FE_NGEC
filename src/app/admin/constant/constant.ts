@@ -4,4 +4,3 @@ export enum NavItems {
     ManageCategories = 'Manage Categories',
     ManageProducts = 'Manage Products',
   }
-  

@@ -43,7 +43,7 @@ export class LoginComponent {
     const token = this.cookieService.get('token');
     const remember = this.cookieService.get('remember');
     if(remember && token) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['']);
     }
   }
 
@@ -56,6 +56,7 @@ export class LoginComponent {
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
     }
+    
 
     this.loginService.login(user).subscribe(res => {
     }, (err) => {
@@ -71,7 +72,7 @@ export class LoginComponent {
           }
           this.cookieService.set('token', this.tokenString);
           this.toastService.show('Login successfully!');
-          this.router.navigate(['/home']);
+          this.router.navigate(['']);
           break;
         }
       }

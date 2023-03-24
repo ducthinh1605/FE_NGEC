@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavItems } from '../constants/admin.constant';
+import { NavItems } from '../constant/constant';
 
 @Component({
   selector: 'app-dashboard',

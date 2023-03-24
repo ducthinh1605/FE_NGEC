@@ -1,6 +1,5 @@
 <div id="mySidenav" class="sidenav" [ngClass]="status ? 'active' : 'inactive'">
     <p class="logo"><span>Apple </span><b [ngClass]="status ? 'hidden' : 'visible'">Place</b></p>
-    <a (click)="onChangeSession(NAV_ITEM.Dashboard)" [ngClass]="{'active': sessison === NAV_ITEM.Dashboard }" [style]="{'cursor':'pointer'}" class="icon-a"><i class="fa fa-dashboard icons"></i>   <span [ngClass]="status ? 'hidden' : 'visible'"> {{ NAV_ITEM.Dashboard }} </span></a>
     <a (click)="onChangeSession(NAV_ITEM.ManageUsers)" [ngClass]="{'active': sessison === NAV_ITEM.ManageUsers}" [style]="{'cursor':'pointer'}" class="icon-a"><i class="fa fa-users icons"></i>   <span [ngClass]="status ? 'hidden' : 'visible'"> {{ NAV_ITEM.ManageUsers }} </span></a>
     <a (click)="onChangeSession(NAV_ITEM.ManageCategories)" [ngClass]="{'active': sessison === NAV_ITEM.ManageCategories}" [style]="{'cursor':'pointer'}" class="icon-a"><i class="fa fa-list icons"></i>   <span [ngClass]="status ? 'hidden' : 'visible'"> {{ NAV_ITEM.ManageCategories }} </span></a>
     <a (click)="onChangeSession(NAV_ITEM.ManageProducts)" [ngClass]="{'active': sessison === NAV_ITEM.ManageProducts}" [style]="{'cursor':'pointer'}" class="icon-a"><i class="fa fa-shopping-bag icons"></i>   <span [ngClass]="status ? 'hidden' : 'visible'"> {{ NAV_ITEM.ManageProducts }} </span></a>
@@ -50,7 +49,5 @@
     </div>
   
     <app-manage-users *ngIf="sessison === NAV_ITEM.ManageUsers"></app-manage-users>
-    <app-manage-categories *ngIf="sessison === NAV_ITEM.ManageCategories"></app-manage-categories>
-    <app-manage-products *ngIf="sessison === NAV_ITEM.ManageProducts"></app-manage-products>
   </div>
   

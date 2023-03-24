@@ -9,11 +9,15 @@ import { User } from 'src/model/user.model';
 })
 export class UserService {
   httpOptions = {
-    headers:new HttpHeaders({'Content-Type':'Application/json'})
+    headers:new HttpHeaders({'Content-Type':'application/json'})
   }
 
   constructor(private httpClient: HttpClient) { }
-  apiUrl = 'http://alo1234.somee.com/api/User';
+  apiUrl = 'http://cuoikynhom14.somee.com/api/User';
+
+  getTotal() {
+    return this.httpClient.get(this.apiUrl + '/TotalOfUsers');
+  }
 
   getAll(): Observable<any> {
     return this.httpClient.get<any>(this.apiUrl + `/GetUsers`);
@@ -24,8 +28,20 @@ export class UserService {
   }
 
 
-  deleteUser(id: any): Observable<User[]> {
-    return this.httpClient.delete<User[]>(this.apiUrl + `/User/Delete?id=${id}`)
+  editUser(data: any): Observable<any> {
+    console.log("🚀 ~ UserService ~ data:", data)
+    return this.httpClient.put<any>(this.apiUrl + `/Update`, data);
+  }
+
+  
+  userByID(id: any): Observable<any> {
+    return this.httpClient.get<any>(this.apiUrl + `/GetUser/${id}`);
+  }
+
+
+  deleteUser(id: any): Observable<any> {
+    console.log("🚀 ~ UserService ~ data:", id)
+    return this.httpClient.delete<any>(this.apiUrl + `/Delete?id=${id}`)
   }
 
 }

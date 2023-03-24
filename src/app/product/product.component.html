@@ -16,16 +16,21 @@
         <!-- list group item-->
         <div *ngFor="let product of products">
         <li class="list-group-item">
-          <!-- Custom content-->
+          <a (click)="navigateDetails(product)">
           <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-            <div class="media-body order-2 order-lg-1">
+            <div class="media-body">
+              
               <h5 class="mt-0 font-weight-bold mb-2">"{{product.title}}"</h5>
               <p class="font-italic text-muted mb-0 small">"{{product.description}}"</p>
               <div class="d-flex align-items-center justify-content-between mt-1">
-                <h6 style="color: red;" class="font-weight-bold my-2">"{{product.price}} VND"</h6>
-              </div>
-            </div><img src="{{product.imageName }}">
+                <h3 class="act-price">{{ product?.price | currency:'VND' }}</h3>
+            </div>
+          </div> 
+          <div class="order-2 order-lg-1">
+            <img src="{{product.imageName }}">
           </div>
+          </div>
+        </a>
           <!-- End -->
         </li>
       </div>
