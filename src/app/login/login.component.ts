@@ -72,7 +72,7 @@ export class LoginComponent {
           }
           this.cookieService.set('token', this.tokenString);
           this.toastService.show('Login successfully!');
-          this.router.navigate(['']);
+          this.router.navigate(['/index']);
           break;
         }
       }

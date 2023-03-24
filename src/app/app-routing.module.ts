@@ -8,12 +8,13 @@ import { SingleproductComponent } from './singleproduct/singleproduct.component'
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'', component:IndexComponent},
+  {path:'', component:LoginComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'product',component:ProductComponent},
   {path:'single',component:SingleproductComponent},
   {path:'admin',component:DashboardComponent},
+  {path:'index', component:IndexComponent},
 
 ];
 
