@@ -28,7 +28,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
-import { ConfirmDialogComponent } from './confirmdialog/confirmdialog.component';
 import { ManageProductsComponent } from './admin/manage-products/manage-products.component';
 import { ManageUsersComponent } from './admin/manage-users/manage-users.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
@@ -44,7 +43,6 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     ProductComponent,
     CategoryComponent,
     SingleproductComponent,
-    ConfirmDialogComponent,
     ManageProductsComponent,
     ManageUsersComponent,
     DashboardComponent,
